@@ -1,0 +1,9 @@
+# pycache files
+__pychache__/*
+*.pyc
+
+#vim files
+.*.sw*
+
+#vscode files
+.vscode/*
