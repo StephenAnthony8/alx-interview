@@ -1,5 +1,6 @@
-#usr/bin/python3
+#!usr/bin/python3
 """ Module containing pascal's triangle function """
+
 
 def pascal_triangle(n):
     """ O(n^2) Pascal's triangle solution """
