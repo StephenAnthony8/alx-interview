@@ -2,12 +2,12 @@
 """ Module containing pascal's triangle function """
 
 
-def pascal_triangle(n):
+def pascal_triangle(n=int):
     """ O(n^2) Pascal's triangle solution """
     rtn_list = []
 
     cell = []
-    while (n != 0):
+    while (n > 0):
         len_c = len(cell)
         if len_c == 0:
             cell.append(1)
