@@ -89,7 +89,8 @@ def main():
             sys.exit("N must be at least 4")
 
     else:
-        sys.exit("Usage: nqueens N")
+        print('Usage: nqueens N')
+        sys.exit(1)
 
 
 if __name__ == "__main__":
