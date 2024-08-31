@@ -11,7 +11,7 @@ class Nqueen:
         x, y = coordinates
         self.xy = [
             f"[{0 + m}, {(y - x) + m}]" for m in range(val) if (
-                0 <= 0 + m < val and 0 <= (y-x + m) < val
+                0 <= 0 + m < val and 0 <= (y - x + m) < val
             )
             ]
         self.neg_xy = [
