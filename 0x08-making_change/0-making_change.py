@@ -25,7 +25,3 @@ def makeChange(coins=[], total=int):
                     return (count)
     # if both loops return -1, exit function
     return (-1)
-
-
-print(makeChange([1, 2, 25], 37))
-print(makeChange([1256, 54, 48, 16, 102], 1453))
