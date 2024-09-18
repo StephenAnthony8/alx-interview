@@ -2,7 +2,7 @@
 """ 0-making_change """
 
 
-def makeChange(coins=[], total=int):
+def makeChange(coins, total):
     if (total <= 0) or (len(coins) < 1):
         return 0
 
