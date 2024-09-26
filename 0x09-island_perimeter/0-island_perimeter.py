@@ -11,25 +11,18 @@ def island_perimeter(grid=[]):
     # check only blocks that are 1s,
     # check above, left, right & below
 
-    count = 0
+    perimeter = 0
 
-    for x in range(len(grid)):
-        x_axis = grid[x]
-        for y in range(len(x_axis)):
-            # check only blocks that are 1s
-            if (x_axis[y] == 1):
-                # check above
-                if (x > 0) and (grid[x - 1][y] != 1):
-                    count += 1
-                # check below
-                if (x < len(grid) - 1) and (grid[x + 1][y] != 1):
-                    count += 1
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j] == 1:
+                # Assume all land cells have 4 sides
+                perimeter += 4
+                if i > 0 and grid[i - 1][j] == 1:
+                    # Deduct 2 for shared side with above
+                    perimeter -= 2
+                if j > 0 and grid[i][j - 1] == 1:
+                    # Deduct 2 for shared side with neighbor to the left
+                    perimeter -= 2
 
-                # check right
-                if (y > 0) and (x_axis[y - 1] != 1):
-                    count += 1
-
-                # check left
-                if (y < len(x_axis) - 1 and (x_axis[y + 1] != 1)):
-                    count += 1
-    return (count)
+    return perimeter
